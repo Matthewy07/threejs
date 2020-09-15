@@ -1,0 +1,50 @@
+using System;
+using System.Threading.Tasks;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Double_Madness
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double[][] szamok = new double[12][];
+            Random random = new Random();
+            
+            for(int i=0;i < szamok.Length; i++)
+            {
+                    szamok[i] = new double[30];
+
+                for(int e=0;e < szamok[i].Length; e++)
+                {
+                    szamok[i][e] = Math.Round(random.NextDouble()*(35)+(-10),2);
+                }
+
+
+                for(int t=0;t < szamok[i].Length; t++)
+                {
+                    Console.Write(szamok[i][t] + " || ");
+                   
+                }
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            double[] maxArray = new double[12];
+
+            for (int q = 0; q < szamok.Length; q++)
+            {
+                Console.WriteLine($"{q+1}.hónapban a maximum hőmérséklet {szamok[q].Max()} C°");
+                maxArray[q] = szamok[q].Max();
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine($"{Array.IndexOf(maxArray,maxArray.Max())+1}.hónapban volt a legmelegebb, {maxArray.Max()} C°");
+
+            Console.ReadLine();
+        }
+    }
+}
