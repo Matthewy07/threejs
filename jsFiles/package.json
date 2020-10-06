@@ -1,0 +1,21 @@
+{
+  "name": "exp",
+  "version": "1.0.0",
+  "description": "please",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "Matthew Sera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "three": "^0.121.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
