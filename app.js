@@ -1,11 +1,12 @@
-const express = require("express");
-const path = require("path");
+let express = require("express");
 let app =express();
+let path = require("path");
+
 
 app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname,"/node_modules")));
+
 
 app.get("/",(req,res)=>{
-
     res.end();
-
-}).listen(3000);
+}).listen(4500);

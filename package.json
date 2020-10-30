@@ -1,16 +1,17 @@
 {
-  "name": "raycaster",
+  "name": "canvasDrawing",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon app"
+    "test": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "three": "^0.122.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
