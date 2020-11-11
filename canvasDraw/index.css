@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+#canvas{
+    position:absolute;
+    top:0;
+    border:1px solid black;
+}
+
+#conta{
+    position:absolute; 
+    top:0;
+    right:0;
+    border:1px solid black;
+}
+.flexBtn{
+    background-color:beige;
+    z-index:900;
+    cursor:pointer;
+    border:1px solid black;
+    height:10%;
+}
+
+#btnCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position:absolute;
+    right:0;
+    top:0;
+    line-height: 300%;
+    text-align: center;
+    font-weight:bold;
+    height:100%;
+
+}
+
+#sizeBar{
+    border:1px solid black;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+}
+#sizeBar::before{
+    content:"+";
+    font-weight :bold;
+    position:absolute;
+    left:0;
+    transform:scale(2) translateX(-150%);
+}
+
+#sizeBar::after{
+    content:"-";
+    position:absolute;
+    right:0;
+    transform:scale(2) translateX(150%) ;
+
+}
